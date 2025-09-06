@@ -6,15 +6,17 @@
 int main() {
     // declaração dos tipos de variáveis que serão utilizadas e seus respectivos nomes para carta 01.
     char estado1, codigo_carta1[4], nome_cidade1[20];
-    float area1, produto_interno_bruto1, densidade_populacional1, pib_per_capita1;
-    int pontos_turisticos1, carta1;
+    double area1, densidade_populacional1, pib_per_capita1;
+    double produto_interno_bruto1;
+    int pontos_turisticos1;
     unsigned long int populacao1;
     float super_poder1;
 
     // declaração dos tipos de variáveis que serão utilizadas e seus respectivos nomes para carta 02.
     char estado2, codigo_carta2[4], nome_cidade2[20];
-    float area2, produto_interno_bruto2, densidade_populacional2, pib_per_capita2;
-    int pontos_turisticos2, carta2;
+    double area2, densidade_populacional2, pib_per_capita2;
+    double produto_interno_bruto2;
+    int pontos_turisticos2;
     unsigned long int populacao2;
     float super_poder2;
 
@@ -42,7 +44,7 @@ int main() {
     scanf("%f", &area1);
 
     printf("Digite o Produto Interno Bruto (PIB) da cidade: \n");
-    scanf("%f", &produto_interno_bruto1);
+    scanf("%lf", &produto_interno_bruto1);
 
     printf("Digite a quantidade de pontos turisticos da cidade: \n");
     scanf("%d", &pontos_turisticos1);
@@ -74,7 +76,7 @@ int main() {
     scanf("%f", &area2);
 
     printf("Digite o Produto Interno Bruto (PIB) da cidade: \n");
-    scanf("%f", &produto_interno_bruto2);
+    scanf("%lf", &produto_interno_bruto2);
 
     printf("Digite a quantidade de pontos turisticos da cidade: \n");
     scanf("%d", &pontos_turisticos2);
@@ -119,74 +121,51 @@ int main() {
     super_poder1 = populacao1 + area1 + produto_interno_bruto1 + (float)pontos_turisticos1 + pib_per_capita1 + densidade_populacional1;
     super_poder2 = populacao2 + area2 + produto_interno_bruto2 + (float)pontos_turisticos2 + pib_per_capita2 + densidade_populacional2;
 
-    carta1 = 0;
-    carta2 = 0;
-
     // Comparação de Cartas:
+    printf("\n");
+    printf("************************************\n");
+    printf("* Comparação de Cartas *\n");
+    printf("************************************\n");
     if (populacao1 > populacao2){
-        printf("Cidade 1 tem maior população.\n");
-        carta1 + 1;
+        printf("A Cidade %s tem maior população.\n", nome_cidade1);
     } else {
-        printf("Cidade 2 tem maior população.\n");
-        carta2 + 1;
+        printf("A Cidade %s tem maior população.\n", nome_cidade2);
     }
 
     if (area1 > area2){
-        printf("Cidade 1 tem uma área maior.\n");
-        carta1 + 1;
+        printf("A Cidade %s tem uma área maior.\n", nome_cidade1);
     } else {
-        printf("Cidade 2 tem uma área maior.\n");
-        carta2 + 1;
+        printf("A Cidade %s tem uma área maior.\n", nome_cidade2);
     }
 
     if (produto_interno_bruto1 > produto_interno_bruto2){
-        printf("Cidade 1 tem um PIB maior.\n");
-        carta1 + 1;
+        printf("A Cidade %s tem um PIB maior.\n", nome_cidade1);
     } else {
-        printf("Cidade 2 tem um PIB maior.\n");
-        carta2 + 1;
+        printf("A Cidade %s tem um PIB maior.\n", nome_cidade2);
     }
 
     if (pontos_turisticos1 > pontos_turisticos2){
-        printf("Cidade 1 tem mais pontos turisticos.\n");
-        carta1 + 1;
+        printf("A Cidade %s tem mais pontos turisticos.\n", nome_cidade1);
     } else {
-        printf("Cidade 2 tem mais pontos turisticos.\n");
-        carta2 + 1;
+        printf("A Cidade %s tem mais pontos turisticos.\n", nome_cidade2);
     }
 
     if (densidade_populacional1 < densidade_populacional2){
-        printf("Cidade 1 tem menor densidade populacional.\n");
-        carta1 + 1;
+        printf("A Cidade %s tem menor densidade populacional.\n", nome_cidade1);
     } else {
-        printf("Cidade 2 tem menor densidade populacional.\n");
-        carta2 + 1;
+        printf("A Cidade %s tem menor densidade populacional.\n", nome_cidade2);
     }
 
     if (pib_per_capita1 > pib_per_capita2){
-        printf("Cidade 1 tem PIB per capita maior.\n");
-        carta1 + 1;
+        printf("A Cidade %s tem PIB per capita maior.\n", nome_cidade1);
     } else {
-        printf("Cidade 2 tem PIB per capita maior.\n");
-        carta2 + 1;
+        printf("A Cidade %s tem PIB per capita maior.\n", nome_cidade2);
     }
 
     if (super_poder1 > super_poder2){
-        printf("Cidade 1 tem um Super poder maior.\n");
-        carta1 + 1;
+        printf("A Cidade %s tem um Super poder maior.\n", nome_cidade1);
     } else {
-        printf("Cidade 2 tem um Super poder maior.\n");
-        carta2 + 1;
-    }
-   
-    // Exibição dos Resultados:
-    printf("Pontos Carta 1: %d pontos\n", carta1;
-    printf("Pontos Carta 2: %d pontos\n", carta2;
-
-    if (carta1 > carta2){
-        printf("A cidade vencedora é: %s\n", nome_cidade1);
-    } else {
-        printf("A cidade vencedora é: %s\n", nome_cidade2);
+        printf("A Cidade %s tem um Super poder maior.\n", nome_cidade2);
     }
 
     return 0;
