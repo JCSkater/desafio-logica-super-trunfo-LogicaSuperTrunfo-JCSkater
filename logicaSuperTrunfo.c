@@ -180,6 +180,9 @@ int main() {
     }
    
     // Exibição dos Resultados:
+    printf("Pontos Carta 1: %d pontos\n", carta1;
+    printf("Pontos Carta 2: %d pontos\n", carta2;
+
     if (carta1 > carta2){
         printf("A cidade vencedora é: %s\n", nome_cidade1);
     } else {
