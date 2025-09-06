@@ -1,9 +1,6 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-
-int main() {
+int main(){
     // declaração dos tipos de variáveis que serão utilizadas e seus respectivos nomes para carta 01.
     char estado1, codigo_carta1[4], nome_cidade1[20];
     float area1, produto_interno_bruto1, densidade_populacional1, pib_per_capita1;
@@ -18,7 +15,7 @@ int main() {
     unsigned long int populacao2;
     float super_poder2;
 
-   // Titulo do App
+    // Titulo do App
     printf("************************************\n");
     printf("* Cadastro de Cartas - SuperTrunfo *\n");
     printf("************************************\n");
@@ -119,23 +116,28 @@ int main() {
     super_poder1 = populacao1 + area1 + produto_interno_bruto1 + (float)pontos_turisticos1 + pib_per_capita1 + densidade_populacional1;
     super_poder2 = populacao2 + area2 + produto_interno_bruto2 + (float)pontos_turisticos2 + pib_per_capita2 + densidade_populacional2;
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    // Comparações armazenadas em variáveis
+    int vitoria_populacao = (populacao1 > populacao2);
+    int vitoria_area = (area1 > area2);
+    int vitoria_pib = (produto_interno_bruto1 > produto_interno_bruto2);
+    int vitoria_pontos_turisticos = (pontos_turisticos1 > pontos_turisticos2);
+    int vitoria_densidade = (densidade_populacional1 < densidade_populacional2); // menor vence
+    int vitoria_pib_per_capita = (pib_per_capita1 > pib_per_capita2);
+    int vitoria_super_poder = (super_poder1 > super_poder2);
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
+    printf("\n");
+    printf("************************************\n");
+    printf("* Comparação de Cartas *\n");
+    printf("************************************\n");
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+    printf("População: Carta 1 venceu (%d)\n", vitoria_populacao);
+    printf("Área: Carta 1 venceu (%d)\n", vitoria_area);
+    printf("PIB: Carta 1 venceu (%d)\n", vitoria_pib);
+    printf("Pontos Turísticos: Carta 1 venceu (%d)\n", vitoria_pontos_turisticos);
+    printf("Densidade Populacional: Carta 1 venceu (%d)\n", vitoria_densidade);
+    printf("PIB per Capita: Carta 1 venceu (%d)\n", vitoria_pib_per_capita);
+    printf("Super Poder: Carta 1 venceu (%d)\n", vitoria_super_poder);    
 
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
 
     return 0;
 }
